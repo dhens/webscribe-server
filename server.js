@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
-const PORT = 80 || process.env.PORT;
+const PORT = process.env.PORT || 80;
 app.use(bodyParser.text({type:"*/*"}));
 
 app.post('/', function (req, res) {
