@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 80;
-app.use(bodyParser.text({type:"*/*"}));
+app.use(bodyParser.text({type:"text/plain"}));
 
 app.post('/', function (req, res) {
   console.log(req.body);
