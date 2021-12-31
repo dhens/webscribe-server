@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
-const res = require('express/lib/response');
 
 app.use(bodyParser.text({type:"*/*"}));
 
