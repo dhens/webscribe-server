@@ -1,13 +1,15 @@
 const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
+const res = require('express/lib/response');
 
 app.use(bodyParser.text({type:"*/*"}));
 
-app.post('/', function (req) {
+app.post('/', function (req, res) {
   console.log(req.body);
-})
+  res.sendStatus(200);
+});
 
-app.listen(8008, function() {
+app.listen(80, function() {
     console.log("Server is warmed up.");
-})
+});
